@@ -10,6 +10,11 @@ import Foundation
 import Alamofire
 
 class ChatViewModelFromChat: ChatViewModel {
+    // a demo user when login implemented we need to implement loggined user instead of this
+    struct User{
+        public static let USER_NAME = "Dcoder"
+        public static let USER_IMAGE_URL = "http://dcoder.tech/avatar/dev7.png"
+    }
     
     var isOffline: Dynamic<Bool>
     var chatCount: Dynamic<Int>
@@ -60,6 +65,12 @@ class ChatViewModelFromChat: ChatViewModel {
     
     func refreshChatList() {
         fetchChatList()
+    }
+    
+    func sentChat(withMessage msg:String){
+        let chatDetail = Chat(name: User.USER_NAME, image: User.USER_IMAGE_URL, isMyMsg: true, textMsg: msg)
+        self.chatList.append(chatDetail)
+        self.chatCount.value = self.chatList.count
     }
 }
 

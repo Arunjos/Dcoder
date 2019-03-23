@@ -10,6 +10,7 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var chatTextview: UITextView!
     @IBOutlet weak var chatListTableview: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var viewModel:ChatViewModel = ChatViewModelFromChat()
@@ -34,9 +35,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func setupViewModel() {
-        viewModel.chatCount.bind{[unowned self] _ in
+        viewModel.chatCount.bind{[unowned self] count in
             DispatchQueue.main.async {
                 self.chatListTableview.reloadData()
+                self.chatListTableview.scrollToRow(at: IndexPath(row: count-1, section: 0), at: .bottom, animated: false)
             }
         }
         viewModel.isChatFetching.bind{[unowned self] show in
@@ -81,6 +83,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return UITableViewAutomaticDimension
+    }
+    
+    
+    @IBAction func chatSentClicked(_ sender: Any) {
+        if chatTextview.text != "" {
+            viewModel.sentChat(withMessage: chatTextview.text)
+            chatTextview.text = ""
+        }
     }
     
     /*

@@ -124,6 +124,9 @@
                                     <constraint firstAttribute="width" secondItem="MFB-8y-76d" secondAttribute="height" multiplier="1:1" id="yf2-hI-6LP"/>
                                 </constraints>
                                 <state key="normal" image="Sent"/>
+                                <connections>
+                                    <action selector="chatSentClicked:" destination="gah-3T-CdR" eventType="touchUpInside" id="PUr-qT-36n"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="03M-Oa-ZOt">
                                 <rect key="frame" x="0.0" y="64" width="414" height="592"/>
@@ -161,6 +164,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="47D-C5-QH6" id="Jqk-wD-Fq1"/>
                         <outlet property="chatListTableview" destination="03M-Oa-ZOt" id="d5b-am-L5k"/>
+                        <outlet property="chatTextview" destination="ieI-th-GVF" id="6zH-gW-4N2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3a-lv-rmt" userLabel="First Responder" sceneMemberID="firstResponder"/>

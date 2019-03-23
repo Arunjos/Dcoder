@@ -18,4 +18,5 @@ protocol ChatViewModel {
     func getSelectedChatMessage(atIndex indexpath:IndexPath) -> Chat?
     func fetchChatList()
     func refreshChatList()
+    func sentChat(withMessage msg:String)
 }

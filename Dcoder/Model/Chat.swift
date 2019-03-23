@@ -19,6 +19,13 @@ public class Chat: Mappable {
         
     }
     
+    init(name userName:String?, image userImage:String?, isMyMsg isMyMessage:Bool?, textMsg text:String?) {
+        self.userImage = userImage
+        self.userName = userName
+        self.isMyMessage = isMyMessage
+        self.text = text
+    }
+    
     public func mapping(map: Map) {
         userName <- map[Constants.PARAMS.USER_NAME]
         userImage <- map[Constants.PARAMS.USER_IMAGE_URL]
