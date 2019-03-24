@@ -16,9 +16,10 @@ protocol CodeViewModel {
     
     func getCodeDetailForCell(atIndex indexpath:IndexPath) -> Code?
     func getSelectedCode(atIndex indexpath:IndexPath) -> Code?
-    func fetchCodeList()
+    func fetchCodeList(url: String)
     func refreshCodeList()
     func addCode(title:String, code:String, tag:String)
     func filterOneApply(forIndex index:Int)
     func filterTwoApply(forIndex index:Int)
+    func getFullCodeList() -> [Code]
 }

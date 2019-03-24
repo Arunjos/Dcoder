@@ -63,14 +63,14 @@ class CodeTableViewCell: UITableViewCell {
         var daysAgo = ""
         if components.day != 0{
             if let days = components.day, days < 7 {
-                daysAgo = "\(components.day ?? 0) days ago"
+                daysAgo = "\(days) days ago"
             }else{
                 daysAgo = "7+ days ago"
             }
         } else if let hour = components.hour, hour != 0 {
-            daysAgo = "\(components.hour ?? 0) hrs ago"
+            daysAgo = "\(hour) hrs ago"
         } else if let minute = components.minute, minute != 0 {
-            daysAgo = "\(components.minute ?? 0) mins ago"
+            daysAgo = "\(minute) mins ago"
         } else {
             daysAgo = "now"
         }

@@ -38,39 +38,35 @@ class ChatViewModelFromChat: ChatViewModel {
         return chatList[safe: indexpath.row]
     }
     
-    func fetchChatList() {
+    func fetchChatList(url: String) {
         self.isChatFetching.value = true
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
             "Accept": "application/json"
         ]
-        Alamofire.request(Constants.CHAT_API_URL, method:.get,parameters:nil, headers: headers).responseJSON { [unowned self] response in
+        Alamofire.request(url, method:.get,parameters:nil, headers: headers).responseJSON { [unowned self] response in
             self.isChatFetching.value = false
-            guard let responseCode = response.response?.statusCode else{
-                self.error.value = "Chats fetch faild due to internal error"
+            guard let responseArray = response.result.value as? [[String : Any]] else {
+                self.error.value = "Failed to parse chat list response"
                 return
             }
-            if (responseCode >= 400) {
-                self.error.value = "Failed chats fetch with error \(response.error?.localizedDescription ?? "")"
-            } else {
-                guard let responseArray = response.result.value as? [[String : Any]] else {
-                    self.error.value = "Failed to parse chat list response"
-                    return
-                }
-                self.chatList = Chat.getChatListFrom(jsonArray: responseArray)
-                self.chatCount.value = self.chatList.count
-            }
+            self.chatList = Chat.getChatListFrom(jsonArray: responseArray)
+            self.chatCount.value = self.chatList.count
         }
     }
     
     func refreshChatList() {
-        fetchChatList()
+        fetchChatList(url: Constants.CHAT_API_URL)
     }
     
     func sentChat(withMessage msg:String){
         let chatDetail = Chat(name: User.USER_NAME, image: User.USER_IMAGE_URL, isMyMsg: true, textMsg: msg)
         self.chatList.append(chatDetail)
         self.chatCount.value = self.chatList.count
+    }
+    
+    func getFullChatList() -> [Chat] {
+        return self.chatList
     }
 }
 

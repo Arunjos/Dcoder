@@ -1,0 +1,37 @@
+[{
+	"user_name": "Dcoder",
+	"user_image_url": "http://dcoder.tech/avatar/dev7.png",
+	"is_sent_by_me": true,
+	"text": "Hi all!"
+}, {
+	"user_name": "Ankush Chugh",
+	"user_image_url": "http://dcoder.tech/avatar/dev2.png",
+	"is_sent_by_me": false,
+	"text": "Hi all!"
+}, {
+	"user_name": "Dcoder",
+	"user_image_url": "http://dcoder.tech/avatar/dev7.png",
+	"is_sent_by_me": true,
+	"text": "Hi all!"
+}, {
+	"user_name": "Dcoder",
+	"user_image_url": "http://dcoder.tech/avatar/dev7.png",
+	"is_sent_by_me": true,
+	"text": "Hi all!"
+}, {
+	"user_name": "Ankush Chugh",
+	"user_image_url": "http://dcoder.tech/avatar/dev7.png",
+	"is_sent_by_me": false,
+	"text": "Hi , This is a test message for the app."
+}, {
+	"user_name": "Xyz",
+	"user_image_url": "http://dcoder.tech/avatar/dev7.png",
+	"is_sent_by_me": false,
+	"text": "Hi , this is a test message."
+}, {
+	"user_name": "Dcoder",
+	"user_image_url": "http://dcoder.tech/avatar/dev7.png",
+	"is_sent_by_me": true,
+	"text": "Hi all!"
+}]
+ 

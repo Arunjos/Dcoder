@@ -44,34 +44,26 @@ class CodeViewModelFromCode: CodeViewModel {
         return filterCodeList[safe: indexpath.row]
     }
     
-    func fetchCodeList() {
+    func fetchCodeList(url:String) {
         self.isCodeListFetching.value = true
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
             "Accept": "application/json"
         ]
-        Alamofire.request(Constants.CODE_API_URL, method:.get,parameters:nil, headers: headers).responseJSON { [unowned self] response in
+        Alamofire.request(url, method:.get,parameters:nil, headers: headers).responseJSON { [unowned self] response in
             self.isCodeListFetching.value = false
-            guard let responseCode = response.response?.statusCode else{
-                self.error.value = "Chats fetch faild due to internal error"
+            guard let responseArray = response.result.value as? [[String : Any]] else {
+                self.error.value = "Failed to parse code list response"
                 return
             }
-            if (responseCode >= 400) {
-                self.error.value = "Failed chats fetch with error \(response.error?.localizedDescription ?? "")"
-            } else {
-                guard let responseArray = response.result.value as? [[String : Any]] else {
-                    self.error.value = "Failed to parse chat list response"
-                    return
-                }
-                self.codeList = Code.getCodeListFrom(jsonArray: responseArray)
-                self.filterCodeList = self.codeList
-                self.codeListCount.value = self.filterCodeList.count
-            }
+            self.codeList = Code.getCodeListFrom(jsonArray: responseArray)
+            self.filterCodeList = self.codeList
+            self.codeListCount.value = self.filterCodeList.count
         }
     }
     
     func refreshCodeList() {
-        fetchCodeList()
+        fetchCodeList(url: Constants.CODE_API_URL)
     }
     
      func filterOneApply(forIndex index:Int) {
@@ -111,5 +103,9 @@ class CodeViewModelFromCode: CodeViewModel {
         self.codeList.insert(codeDetail, at: 0)
         self.filterCodeList = self.codeList
         self.codeListCount.value = self.filterCodeList.count
+    }
+    
+    func getFullCodeList() -> [Code] {
+        return self.codeList
     }
 }

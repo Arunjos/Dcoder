@@ -58,7 +58,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.present(alertController, animated: true, completion: nil)
             
         }
-        viewModel.fetchChatList()
+        viewModel.fetchChatList(url: Constants.CHAT_API_URL)
     }
     
 

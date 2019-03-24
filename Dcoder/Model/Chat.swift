@@ -34,9 +34,16 @@ public class Chat: Mappable {
     }
 }
 
-extension Chat {
+extension Chat: Equatable {
     public static func getChatListFrom(jsonArray:[[String:Any]]) -> [Chat] {
         let chatList = Mapper<Chat>().mapArray(JSONArray: jsonArray)
         return chatList
+    }
+    
+    public static func == (lhs: Chat, rhs: Chat) -> Bool {
+        if lhs.userName == rhs.userName && lhs.userImage == rhs.userImage && lhs.isMyMessage == rhs.isMyMessage && lhs.text == rhs.text{
+            return true
+        }
+        return false
     }
 }

@@ -34,6 +34,9 @@
 		DCB02ADA22455FBB0001806E /* DcoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB02AD922455FBB0001806E /* DcoderTests.swift */; };
 		DCB02AE522455FBB0001806E /* DcoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB02AE422455FBB0001806E /* DcoderUITests.swift */; };
 		DCF3262A224798A70043A96B /* AddCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF32629224798A70043A96B /* AddCodeViewController.swift */; };
+		DCF3262C2247B03A0043A96B /* test_chat.json in Resources */ = {isa = PBXBuildFile; fileRef = DCF3262B2247B03A0043A96B /* test_chat.json */; };
+		DCF3262E2247BA770043A96B /* test_code.json in Resources */ = {isa = PBXBuildFile; fileRef = DCF3262D2247BA770043A96B /* test_code.json */; };
+		DCF326302247C2FA0043A96B /* test_invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = DCF3262F2247C2F90043A96B /* test_invalid.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		DCB02AE422455FBB0001806E /* DcoderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DcoderUITests.swift; sourceTree = "<group>"; };
 		DCB02AE622455FBB0001806E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF32629224798A70043A96B /* AddCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCodeViewController.swift; sourceTree = "<group>"; };
+		DCF3262B2247B03A0043A96B /* test_chat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_chat.json; sourceTree = "<group>"; };
+		DCF3262D2247BA770043A96B /* test_code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_code.json; sourceTree = "<group>"; };
+		DCF3262F2247C2F90043A96B /* test_invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_invalid.json; sourceTree = "<group>"; };
 		DD9F7C192CDE4C6ECF07B381 /* Pods-DcoderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DcoderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DcoderTests/Pods-DcoderTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,6 +287,9 @@
 		DCB02AD822455FBB0001806E /* DcoderTests */ = {
 			isa = PBXGroup;
 			children = (
+				DCF3262B2247B03A0043A96B /* test_chat.json */,
+				DCF3262F2247C2F90043A96B /* test_invalid.json */,
+				DCF3262D2247BA770043A96B /* test_code.json */,
 				DCB02AD922455FBB0001806E /* DcoderTests.swift */,
 				DCB02ADB22455FBB0001806E /* Info.plist */,
 			);
@@ -417,6 +426,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF3262E2247BA770043A96B /* test_code.json in Resources */,
+				DCF3262C2247B03A0043A96B /* test_chat.json in Resources */,
+				DCF326302247C2FA0043A96B /* test_invalid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

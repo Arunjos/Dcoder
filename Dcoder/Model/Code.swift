@@ -53,9 +53,16 @@ public class Code: Mappable {
     }
 }
 
-extension Code {
+extension Code: Equatable {
     public static func getCodeListFrom(jsonArray:[[String:Any]]) -> [Code] {
         let codeList = Mapper<Code>().mapArray(JSONArray: jsonArray)
         return codeList
+    }
+    
+    public static func == (lhs: Code, rhs: Code) -> Bool {
+        if lhs.userName == rhs.userName && lhs.userImageURL == rhs.userImageURL && lhs.time == rhs.time && lhs.tags == rhs.tags && lhs.title == rhs.title && lhs.code == rhs.code && lhs.codeLanguage == rhs.codeLanguage && lhs.upvotes == rhs.upvotes && lhs.downvotes == rhs.downvotes && lhs.comments == rhs.comments{
+            return true
+        }
+        return false
     }
 }

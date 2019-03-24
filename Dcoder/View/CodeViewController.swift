@@ -91,7 +91,7 @@ class CodeViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.present(alertController, animated: true, completion: nil)
             
         }
-        viewModel.fetchCodeList()
+        viewModel.fetchCodeList(url: Constants.CODE_API_URL)
     }
     
     
