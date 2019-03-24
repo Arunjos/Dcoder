@@ -31,7 +31,7 @@ class AddCodeViewController: UIViewController {
     
     @IBAction func clickedAdd(_ sender: Any) {
         if isVaildFormData() {
-            if let presenter = presentingViewController?.childViewControllers[0] as? CodeViewController {
+            if let presenter = presentingViewController?.childViewControllers[1] as? CodeViewController {
                 presenter.addCode(title: titleTextField.text ?? "", code: codeTextField.text ?? "", tag: tagTextFiled.text ?? "")
             }
             self.dismiss(animated: true, completion: nil)

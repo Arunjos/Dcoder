@@ -32,7 +32,7 @@
                             </constraint>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d6m-6D-W52">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="d6m-6D-W52">
                         <rect key="frame" x="40" y="10" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="3f5-LF-uY8">
@@ -110,4 +110,7 @@
             <point key="canvasLocation" x="34" y="96"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="left" width="16" height="16"/>
+    </resources>
 </document>
