@@ -33,6 +33,7 @@
 		DCB02ACF22455FBB0001806E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB02ACD22455FBB0001806E /* LaunchScreen.storyboard */; };
 		DCB02ADA22455FBB0001806E /* DcoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB02AD922455FBB0001806E /* DcoderTests.swift */; };
 		DCB02AE522455FBB0001806E /* DcoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB02AE422455FBB0001806E /* DcoderUITests.swift */; };
+		DCF3262A224798A70043A96B /* AddCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF32629224798A70043A96B /* AddCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		DCB02AE022455FBB0001806E /* DcoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DcoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB02AE422455FBB0001806E /* DcoderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DcoderUITests.swift; sourceTree = "<group>"; };
 		DCB02AE622455FBB0001806E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF32629224798A70043A96B /* AddCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCodeViewController.swift; sourceTree = "<group>"; };
 		DD9F7C192CDE4C6ECF07B381 /* Pods-DcoderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DcoderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DcoderTests/Pods-DcoderTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				DC3F17822246724800310E0E /* Cells */,
 				DC3F178D2246787B00310E0E /* ChatViewController.swift */,
 				DC3F17A92246D5E000310E0E /* CodeViewController.swift */,
+				DCF32629224798A70043A96B /* AddCodeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				DC3F179A2246892B00310E0E /* ChatViewModel.swift in Sources */,
 				DC3F17902246788D00310E0E /* Dynamic.swift in Sources */,
 				DC3F17A122469FC700310E0E /* Array+safe.swift in Sources */,
+				DCF3262A224798A70043A96B /* AddCodeViewController.swift in Sources */,
 				DC3F17852246728400310E0E /* OthersChatTableViewCell.swift in Sources */,
 				DC3F17AA2246D5E000310E0E /* CodeViewController.swift in Sources */,
 				DC3F17982246865A00310E0E /* Constants.swift in Sources */,

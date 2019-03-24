@@ -58,10 +58,8 @@ class CodeTableViewCell: UITableViewCell {
         print(postedDate)
         
         let calendar = Calendar.current
-        let date1 = calendar.startOfDay(for: postedDate)
-        let date2 = calendar.startOfDay(for: Date())
 
-        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        let components = calendar.dateComponents([.day, .hour, .minute], from: postedDate, to: Date())
         var daysAgo = ""
         if components.day != 0{
             if let days = components.day, days < 7 {
@@ -69,12 +67,12 @@ class CodeTableViewCell: UITableViewCell {
             }else{
                 daysAgo = "7+ days ago"
             }
-        } else if components.hour != 0 {
+        } else if let hour = components.hour, hour != 0 {
             daysAgo = "\(components.hour ?? 0) hrs ago"
-        } else if components.minute != 0 {
+        } else if let minute = components.minute, minute != 0 {
             daysAgo = "\(components.minute ?? 0) mins ago"
-        } else if components.second != 0 {
-            daysAgo = "\(components.second ?? 0) secs ago"
+        } else {
+            daysAgo = "now"
         }
         return daysAgo
     }

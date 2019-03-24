@@ -105,9 +105,11 @@ class CodeViewModelFromCode: CodeViewModel {
         
     }
     
-    func addCode(withMessage msg:String){
-//        let chatDetail = Chat(name: User.USER_NAME, image: User.USER_IMAGE_URL, isMyMsg: true, textMsg: msg)
-//        self.codeList.append(chatDetail)
-//        self.codeListCount.value = self.chatList.count
+    func addCode(title:String, code:String, tag:String){
+        let time = String(Date().timeIntervalSince1970)
+        let codeDetail = Code(userName: User.USER_NAME, userImageURL: User.USER_IMAGE_URL, time: time, tags: tag.components(separatedBy: ","), title: title, code: code, codeLanguage: "", upvotes: 0, downvotes: 0, comments: 0)
+        self.codeList.insert(codeDetail, at: 0)
+        self.filterCodeList = self.codeList
+        self.codeListCount.value = self.filterCodeList.count
     }
 }

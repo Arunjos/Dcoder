@@ -120,5 +120,9 @@ class CodeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func filterTwoClicked(_ sender: Any) {
         dropDownfilter2.show()
     }
+    
+    func addCode(title:String, code:String, tag:String) {
+        viewModel.addCode(title: title, code: code, tag: tag)
+    }
 
 }
