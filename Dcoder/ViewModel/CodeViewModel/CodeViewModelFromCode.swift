@@ -76,7 +76,7 @@ class CodeViewModelFromCode: CodeViewModel {
         filter()
     }
     fileprivate func filter() {
-        if filter2Value.lowercased() == "All".lowercased() {
+        if filter2Value.lowercased() == "all" {
             filterCodeList = codeList
             codeListCount.value = filterCodeList.count
             return
@@ -99,9 +99,11 @@ class CodeViewModelFromCode: CodeViewModel {
     
     func addCode(title:String, code:String, tag:String){
         let time = String(Date().timeIntervalSince1970)
-        let codeDetail = Code(userName: User.USER_NAME, userImageURL: User.USER_IMAGE_URL, time: time, tags: tag.components(separatedBy: ","), title: title, code: code, codeLanguage: "", upvotes: 0, downvotes: 0, comments: 0)
+        var tags = tag.components(separatedBy: ",")
+        tags = tags.map{$0.lowercased()}
+        let codeDetail = Code(userName: User.USER_NAME, userImageURL: User.USER_IMAGE_URL, time: time, tags: tags, title: title, code: code, codeLanguage: "", upvotes: 0, downvotes: 0, comments: 0)
         self.codeList.insert(codeDetail, at: 0)
-        self.filterCodeList = self.codeList
+        self.filterCodeList.insert(codeDetail, at: 0)
         self.codeListCount.value = self.filterCodeList.count
     }
     
