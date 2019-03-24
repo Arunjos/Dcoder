@@ -21,6 +21,12 @@
 		DC3F179A2246892B00310E0E /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F17992246892B00310E0E /* ChatViewModel.swift */; };
 		DC3F179C224692DD00310E0E /* ChatViewModelFromChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F179B224692DD00310E0E /* ChatViewModelFromChat.swift */; };
 		DC3F17A122469FC700310E0E /* Array+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F17A022469FC700310E0E /* Array+safe.swift */; };
+		DC3F17A72246D4C700310E0E /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F17A52246D4C700310E0E /* CodeTableViewCell.swift */; };
+		DC3F17A82246D4C700310E0E /* CodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3F17A62246D4C700310E0E /* CodeTableViewCell.xib */; };
+		DC3F17AA2246D5E000310E0E /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F17A92246D5E000310E0E /* CodeViewController.swift */; };
+		DC3F17AE2247383E00310E0E /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F17AD2247383E00310E0E /* CodeViewModel.swift */; };
+		DC3F17B02247389300310E0E /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F17AF2247389300310E0E /* Code.swift */; };
+		DC3F17B22247404000310E0E /* CodeViewModelFromCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F17B12247404000310E0E /* CodeViewModelFromCode.swift */; };
 		DCB02AC522455FB80001806E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB02AC422455FB80001806E /* AppDelegate.swift */; };
 		DCB02ACA22455FB80001806E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB02AC822455FB80001806E /* Main.storyboard */; };
 		DCB02ACC22455FBB0001806E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCB02ACB22455FBB0001806E /* Assets.xcassets */; };
@@ -66,6 +72,12 @@
 		DC3F17992246892B00310E0E /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		DC3F179B224692DD00310E0E /* ChatViewModelFromChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModelFromChat.swift; sourceTree = "<group>"; };
 		DC3F17A022469FC700310E0E /* Array+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+safe.swift"; sourceTree = "<group>"; };
+		DC3F17A52246D4C700310E0E /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
+		DC3F17A62246D4C700310E0E /* CodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeTableViewCell.xib; sourceTree = "<group>"; };
+		DC3F17A92246D5E000310E0E /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		DC3F17AD2247383E00310E0E /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
+		DC3F17AF2247389300310E0E /* Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
+		DC3F17B12247404000310E0E /* CodeViewModelFromCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModelFromCode.swift; sourceTree = "<group>"; };
 		DCB02AC122455FB80001806E /* Dcoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dcoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB02AC422455FB80001806E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCB02AC922455FB80001806E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +149,7 @@
 			children = (
 				DC3F1793224685D800310E0E /* Chat.swift */,
 				DC3F17972246865A00310E0E /* Constants.swift */,
+				DC3F17AF2247389300310E0E /* Code.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,9 +157,9 @@
 		DC3F177F224671D900310E0E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DC3F17AC224737FF00310E0E /* CodeViewModel */,
+				DC3F17AB224737E300310E0E /* ChatViewModel */,
 				DC3F178F2246788D00310E0E /* Dynamic.swift */,
-				DC3F17992246892B00310E0E /* ChatViewModel.swift */,
-				DC3F179B224692DD00310E0E /* ChatViewModelFromChat.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -156,6 +169,7 @@
 			children = (
 				DC3F17822246724800310E0E /* Cells */,
 				DC3F178D2246787B00310E0E /* ChatViewController.swift */,
+				DC3F17A92246D5E000310E0E /* CodeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +177,7 @@
 		DC3F17822246724800310E0E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DC3F17A42246D49C00310E0E /* CodeCell */,
 				DC3F1788224672A600310E0E /* MyChatCell */,
 				DC3F17872246729600310E0E /* OthersChatCell */,
 			);
@@ -193,6 +208,33 @@
 				DC3F17A022469FC700310E0E /* Array+safe.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC3F17A42246D49C00310E0E /* CodeCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC3F17A52246D4C700310E0E /* CodeTableViewCell.swift */,
+				DC3F17A62246D4C700310E0E /* CodeTableViewCell.xib */,
+			);
+			path = CodeCell;
+			sourceTree = "<group>";
+		};
+		DC3F17AB224737E300310E0E /* ChatViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC3F17992246892B00310E0E /* ChatViewModel.swift */,
+				DC3F179B224692DD00310E0E /* ChatViewModelFromChat.swift */,
+			);
+			path = ChatViewModel;
+			sourceTree = "<group>";
+		};
+		DC3F17AC224737FF00310E0E /* CodeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC3F17AD2247383E00310E0E /* CodeViewModel.swift */,
+				DC3F17B12247404000310E0E /* CodeViewModelFromCode.swift */,
+			);
+			path = CodeViewModel;
 			sourceTree = "<group>";
 		};
 		DCB02AB822455FB80001806E = {
@@ -363,6 +405,7 @@
 				DCB02ACF22455FBB0001806E /* LaunchScreen.storyboard in Resources */,
 				DCB02ACC22455FBB0001806E /* Assets.xcassets in Resources */,
 				DC3F178C224672BA00310E0E /* MyChatTableViewCell.xib in Resources */,
+				DC3F17A82246D4C700310E0E /* CodeTableViewCell.xib in Resources */,
 				DCB02ACA22455FB80001806E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,18 +471,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Dcoder/Pods-Dcoder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TagListView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,12 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3F17A72246D4C700310E0E /* CodeTableViewCell.swift in Sources */,
 				DC3F178B224672BA00310E0E /* MyChatTableViewCell.swift in Sources */,
 				DC3F1794224685D800310E0E /* Chat.swift in Sources */,
+				DC3F17AE2247383E00310E0E /* CodeViewModel.swift in Sources */,
+				DC3F17B22247404000310E0E /* CodeViewModelFromCode.swift in Sources */,
+				DC3F17B02247389300310E0E /* Code.swift in Sources */,
 				DC3F179A2246892B00310E0E /* ChatViewModel.swift in Sources */,
 				DC3F17902246788D00310E0E /* Dynamic.swift in Sources */,
 				DC3F17A122469FC700310E0E /* Array+safe.swift in Sources */,
 				DC3F17852246728400310E0E /* OthersChatTableViewCell.swift in Sources */,
+				DC3F17AA2246D5E000310E0E /* CodeViewController.swift in Sources */,
 				DC3F17982246865A00310E0E /* Constants.swift in Sources */,
 				DC3F178E2246787B00310E0E /* ChatViewController.swift in Sources */,
 				DCB02AC522455FB80001806E /* AppDelegate.swift in Sources */,

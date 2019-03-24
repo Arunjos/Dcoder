@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.1)
+  - DropDown (2.3.2)
   - FLAnimatedImage (1.0.12)
   - ObjectMapper (3.4.2)
   - PINCache (2.3)
@@ -10,27 +11,34 @@ PODS:
   - PINRemoteImage/FLAnimatedImage (2.1.4):
     - FLAnimatedImage (>= 1.0)
     - PINRemoteImage/Core
+  - TagListView (1.3.2)
 
 DEPENDENCIES:
   - Alamofire
+  - DropDown (= 2.3.2)
   - ObjectMapper
   - PINRemoteImage
+  - TagListView (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - DropDown
     - FLAnimatedImage
     - ObjectMapper
     - PINCache
     - PINRemoteImage
+    - TagListView
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
+  TagListView: 0c7e9c26b9aff858224ee6b155f5fcacd9e27c83
 
-PODFILE CHECKSUM: c1740cf46293455a3ec4f46ebd7613585f14d793
+PODFILE CHECKSUM: 1c795e51f138b290b20cf3e1fbb070a8fdf0f8d2
 
 COCOAPODS: 1.5.2

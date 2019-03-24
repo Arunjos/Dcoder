@@ -7,6 +7,8 @@ target 'Dcoder' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'PINRemoteImage'
+  pod 'TagListView', '~> 1.0'
+  pod 'DropDown', '2.3.2'
 
   # Pods for Dcoder
 
@@ -20,4 +22,11 @@ target 'Dcoder' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+        config.build_settings.delete('CODE_SIGNING_ALLOWED')
+        config.build_settings.delete('CODE_SIGNING_REQUIRED')
+    end
 end
